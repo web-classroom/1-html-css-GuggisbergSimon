@@ -8,7 +8,7 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6, p {
 	margin: 0;
 }
 
@@ -59,13 +59,8 @@ main {
 	margin-left: 86px;
 }
 
-main p {
-	margin-left: 16px;
-}
-
 #playlist-info {
 	margin-bottom: 48px;
-	display: flex;
 }
 
 #playlist-info img {
@@ -73,6 +68,13 @@ main p {
 	height: 250px;
 	width: 250px;
 	margin-right: 32px;
+}
+
+#playlist-info-text {
+	display: flex;
+	height: 250px;
+	flex-direction: column;
+	justify-content: flex-end;
 }
 
 #playlist-info p {
@@ -86,15 +88,22 @@ main p {
 
 .track {
 	margin-bottom: 32px;
+	margin-left: 16px;
 }
 
+#player-container {
+	flex-grow:0;
+	flex-shrink: 0;
+}
 
 #player {
 	background-color: white;
-	border: 1px solid #9CA3AF;
+	border: 1px solid #E5E7EB;
+	border-bottom-style: none;
 	height: 80px;
 	width: 100%;
 	position: fixed;
+	overflow-y: hidden; /* Prevents 1-pixel offset that happens with sticky */
 	z-index: 2;
 	bottom: 0;
 	left: 0;
@@ -102,8 +111,27 @@ main p {
 
 #player img {
 	float: left;
-	height: 80px;
 	margin-right: 16px;
+	height: 80px;
+}
+
+#player-elements {
+	display: flex;
+	height: 80px;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+
+#current-track {
+	display: flex;
+	flex-direction: row;
+}
+
+#current-track-info {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 }
 
 #player #controls img {
@@ -113,31 +141,38 @@ main p {
 	margin-right: 32px;
 }
 
-.subtitle2, .body2 {
-	margin-left: 16px;
-}
-
-#poweredBy {
-	margin-right: 16px;
+#poweredBy img {
+	height: 30px;
+	width: 150px;
 }
 
 #queue {
-	border: 1px solid #9CA3AF;
-	background-color: #E5E7EB;
+	border: 1px solid #E5E7EB;
+	background-color: #F3F4F6;
+	position: fixed;
 	height: 100%;
 	width: 330px;
-	position: fixed;
 	z-index: 1;
 	top: 0;
 	right: 0;
 }
 
-#queue p {
-	margin-top: 32px;
-	margin-left: 32px;
+#queue-top-left {
+	margin: 32px;
+	top: 0;
+	left: 0;
+	display: flex;
 }
 
-#queueState {
+#queue-middle {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 1;
 	color: #9CA3AF;
-	text-align: center;
 }

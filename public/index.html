@@ -15,10 +15,12 @@
 <main>
 	<section id="playlist-info">
 		<img src="/images/2098157264.jpeg" alt="hits of the moment"/>
-		<p class="body1">Playlist</p>
-		<p class="title">Hits of the moment</p>
-		<p class="body1">By Fábio - Deezer Pop Editor</p>
-		<p class="body1">2016 · 60 songs · 162 minutes</p>
+		<div id="playlist-info-text">
+			<div><p class="body1">Playlist</p></div>
+			<div><p class="title">Hits of the moment</p></div>
+			<div><p class="body1">By Fábio - Deezer Pop Editor</p></div>
+			<div><p class="body1">2016 · 60 songs · 162 minutes</p></div>
+		</div>
 	</section>
 	<div class="track">
 		<p class="subtitle1">Stay</p>
@@ -33,7 +35,6 @@
 		<p class="body1">Doja Cat</p>
 	</div>
 	<div class="track">
-
 		<p class="subtitle1">Bad Habits</p>
 		<p class="body1">Ed Sheeran</p>
 	</div>
@@ -56,26 +57,35 @@
 </main>
 
 <aside id="player">
-	<img src="/images/242430582.jpeg" alt="Stay"/>
-	<p class="subtitle2">STAY</p>
-	<p class="body2">The Kid Laroi</p>
+	<div id="player-elements">
+		<div id="current-track">
+			<img src="/images/242430582.jpeg" alt="Stay"/>
+			<div id="current-track-info">
+				<div><p class="subtitle2">STAY</p></div>
+				<div><p class="body2">The Kid Laroi</p></div>
+			</div>
+		</div>
 
-	<div id="controls">
-	<img src="/icons/skip_previous.svg" alt="Skip Previous"/>
-	<img src="/icons/pause.svg" alt="Pause"/>
-	<img src="/icons/skip_next.svg" alt="Skip Next"/>
-	</div>
+		<div id="controls">
+			<img src="/icons/skip_previous.svg" alt="Skip Previous"/>
+			<img src="/icons/pause.svg" alt="Pause"/>
+			<img src="/icons/skip_next.svg" alt="Skip Next"/>
+		</div>
 
-	<div id="poweredBy">
-		<p class="overline">Powered by</p>
-		<!-- 150x30-->
-		<img src="/images/deezer-logo.svg" alt="Deezer logo"/>
+		<div id="poweredBy">
+			<p class="overline">Powered by</p>
+			<img src="/images/deezer-logo.svg" alt="Deezer logo"/>
+		</div>
 	</div>
 </aside>
 
 <aside id="queue">
-	<p class="body1">Play next · 0 tracks</p>
-	<p class="body1" id="queueState">This queue is empty</p>
+	<div id="queue-top-left">
+		<div><p class="body1">Play next · 0 tracks</p></div>
+	</div>
+	<div id="queue-middle">
+		<div><p class="body1">This queue is empty</p></div>
+	</div>
 </aside>
 </body>
 </html>
