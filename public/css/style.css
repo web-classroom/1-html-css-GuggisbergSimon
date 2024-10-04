@@ -146,6 +146,9 @@ main {
 	flex-direction: column;
 	justify-content: center;
 	align-items: end;
+}
+
+#poweredBy-info {
 	margin-right: 16px;
 }
 
