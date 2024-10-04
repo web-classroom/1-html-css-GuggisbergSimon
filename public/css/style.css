@@ -97,6 +97,7 @@ main {
 }
 
 #player {
+	display: flex;
 	background-color: white;
 	border: 1px solid #E5E7EB;
 	border-bottom-style: none;
@@ -106,25 +107,18 @@ main {
 	z-index: 2;
 	bottom: 0;
 	left: 0;
+	flex-direction: row;
 }
 
 #player img {
 	float: left;
-	margin-right: 16px;
 	height: 80px;
-}
-
-#player-elements {
-	display: flex;
-	height: 80px;
-	flex-direction: row;
-	justify-content: space-between;
-	align-items: center;
 }
 
 #current-track {
 	display: flex;
-	flex-direction: row;
+	flex: 1;
+	gap: 16px;
 }
 
 #current-track-info {
@@ -135,14 +129,23 @@ main {
 
 #controls {
 	display: flex;
+	flex: 1;
 	justify-content: center;
 	align-items: center;
+	gap: 32px;
 }
 
 #controls img {
 	height: 40px;
 	width: 40px;
-	margin-left: 16px;
+}
+
+#poweredBy {
+	display: flex;
+	flex: 1;
+	flex-direction: column;
+	justify-content: center;
+	align-items: end;
 	margin-right: 16px;
 }
 
